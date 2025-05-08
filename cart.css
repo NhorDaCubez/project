@@ -1,0 +1,149 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;    
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cart-list {
+    list-style: none;
+    color:  white;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff; /* Changed to white */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-right: 15px;
+    font-size: 1em;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-details span:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.item-details span:last-child {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #0056b3;
+}
+
+.quantity-span {
+    width: 30px;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+.cart-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cancel-action, .pay-action {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    font-size: 1em;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.cancel-action {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.cancel-action:hover {
+    opacity: 0.8;
+}
+
+.pay-action {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.pay-action:hover {
+    opacity: 0.8;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 20px;
+}

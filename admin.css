@@ -1,0 +1,224 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f3f6f9; /* Lighter background */
+    color: #333; /* Darker default text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Darker heading color */
+    margin-bottom: 1.5rem;
+}
+
+/* Admin Sidebar */
+.admin-sidebar {
+    width: 260px; /* Slightly wider sidebar */
+    height: 100vh;
+    background-color: #343a40; /* Darker sidebar background */
+    color: #ecf0f1; /* Light sidebar text */
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+    overflow-y: auto; /* For scrollable content if needed */
+}
+
+.admin-sidebar h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #fff; /* White heading in sidebar */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.admin-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar ul li {
+    padding: 1rem 1.5rem;
+    text-align: left; /* Align links to the left */
+}
+
+.admin-sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.admin-sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.admin-sidebar .logout-btn {
+    color: #e74c3c !important; /* More prominent red for logout */
+    font-weight: bold;
+}
+
+.admin-sidebar .logout-btn:hover {
+    background-color: rgba(231, 76, 60, 0.2); /* Subtle red hover */
+}
+
+/* Main Content */
+.admin-container {
+    margin-left: 280px; /* Adjust margin to match sidebar width + some spacing */
+    padding: 2rem;
+    width: calc(100% - 280px); /* Calculate width based on sidebar */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Forms */
+.form-create {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid #e0e0e0;
+}
+
+.form-create h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    font-weight: bold;
+}
+
+.form-control {
+    width: calc(33% - 10px); /* More specific class for input */
+    padding: 0.75rem;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.form-create button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+}
+
+.form-create button:hover {
+    background-color: #1e7e34;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-radius: 0.5rem;
+    overflow: hidden; /* For rounded corners on the table */
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Inline Form */
+.inline-form {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.inline-form .form-control-inline {
+    width: 120px;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+/* Archive Button */
+.archive-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.archive-btn:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design (Basic Example) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and content on smaller screens */
+    }
+
+    .admin-sidebar {
+        position: static; /* Make sidebar scroll with content */
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .admin-container {
+        margin-left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form-control {
+        width: 100%; /* Make form controls full width on smaller screens */
+        margin-right: 0;
+    }
+}

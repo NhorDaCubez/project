@@ -1,0 +1,105 @@
+/* CSS Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #c0bcb7;
+
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFD599;
+    padding: 0px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #4C3B3B;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+.btn {
+    background: #4CAF50;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+.hero {
+    padding: 0.5px 30px;
+    background: url('images/food-bg.jpg') center/cover no-repeat;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1000px; 
+    height: 600px; 
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    max-width: 1000px; 
+    height: 600px; 
+    transition: transform 0.5s ease-in-out;
+}
+.carousel img {
+    max-width: 1000px; 
+    height: 600px; 
+    object-fit: cover;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #785959;
+    padding: 100px;
+    border-radius: 8px;
+    width: 500px;
+    height: 100;
+}
+
+footer {
+    background: #000;
+    padding: 10px;
+    font-size: 14px;
+}
+.logo{
+    width: 200px;
+}
+
+
+
